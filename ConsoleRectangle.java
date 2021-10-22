@@ -47,4 +47,16 @@ public class ConsoleRectangle extends ConsoleShape {
 	public int getPerimeter() {
 		return 2 * (this.height + this.width);
 	}
+	
+	@Override
+	public String toString() {
+		String info = "*** Console Rectangle Instance ***\n";
+		info += "-Child class of \"Console Shape\"\n";
+		info += "-Width: " + this.getWidth() + "\n";
+		info += "-Height: " + this.getHeight() + "\n";
+		info += "-Area: " + this.getArea() + "\n";
+		info += "-Perimeter: " + this.getPerimeter() + "\n";
+		info += "-Is Filled-in?: " + ((this.isFilledIn() == true) ? "Yes" : "No") + "\n";
+		return info;
+	}
 }
