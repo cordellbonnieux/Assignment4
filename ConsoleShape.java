@@ -7,10 +7,18 @@
 public abstract class ConsoleShape implements Comparable<ConsoleShape> {
 	private boolean filledIn;
 	
+	/**
+	 * Class Constructor
+	 * @param filled boolean - is filled in?
+	 */
 	public ConsoleShape(boolean filled) {
 		this.filledIn = filled;
 	}
 	
+	/**
+	 * Class Constructor
+	 * Filled in is set to true
+	 */
 	public ConsoleShape() {
 		this(true);
 	}

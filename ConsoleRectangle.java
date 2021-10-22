@@ -1,8 +1,19 @@
-
+/**
+ * Console Rectangle
+ * Child class of ConsoleRectangle, instantiates a Rectangle Object
+ * @author Cordell Bonnieux
+ *
+ */
 public class ConsoleRectangle extends ConsoleShape {
 	private int height;
 	private int width;
 	
+	/**
+	 * Class Constructor
+	 * @param h int - height positive integer
+	 * @param w int - width positive integer
+	 * @param filled boolean - is filled in?
+	 */
 	public ConsoleRectangle(int h, int w, boolean filled) {
 		super(filled);
 		if (h < 1 || w < 1) {
@@ -12,18 +23,35 @@ public class ConsoleRectangle extends ConsoleShape {
 		this.width = w;
 	}
 	
+	/**
+	 * Class Constructor
+	 * @param h int - height
+	 * @param w int - width
+	 */
 	public ConsoleRectangle(int h, int w) {
 		this(h, w, true);
 	}
 	
+	/**
+	 * Get Height
+	 * @return int - the height of the ConsoleRectangle
+	 */
 	public int getHeight() {
 		return this.height;
 	}
 	
+	/**
+	 * Get Width
+	 * @return int - the width of the ConsoleRectangle
+	 */
 	public int getWidth() {
 		return this.width;
 	}
 	
+	/**
+	 * Set Height
+	 * @param h int - positive integer for height
+	 */
 	public void setHeight(int h) {
 		if (h < 1) {
 			throw new IllegalArgumentException("Parameter must be a natural number.");
@@ -31,6 +59,10 @@ public class ConsoleRectangle extends ConsoleShape {
 		this.height = h;
 	}
 	
+	/**
+	 * Set Width
+	 * @param w int - positive integer for width
+	 */
 	public void setWidth(int w) {
 		if (w < 1) {
 			throw new IllegalArgumentException("Parameter must be a natural number.");
@@ -38,11 +70,19 @@ public class ConsoleRectangle extends ConsoleShape {
 		this.width = w;
 	}
 	
+	/**
+	 * Get Area
+	 * @return int - a positive integer representing the area
+	 */
 	@Override
 	public int getArea() {
 		return this.height * this.width;
 	}
 	
+	/**
+	 * Get Perimeter
+	 * @return int - a positive integer representing the perimeter
+	 */
 	@Override
 	public int getPerimeter() {
 		return 2 * (this.height + this.width);
