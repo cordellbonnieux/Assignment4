@@ -38,14 +38,14 @@ public abstract class ConsoleShape implements Comparable<ConsoleShape> {
 	 * Sub-classes use to return shape area
 	 * @return double - area of shape
 	 */
-	public abstract double getArea();
+	public abstract int getArea();
 	
 	/**
 	 * Get Perimeter
 	 * Sub-classes use to return shape perimeter
 	 * @return double - perimeter of shape
 	 */
-	public abstract double getPerimeter();
+	public abstract int getPerimeter();
 	
 	/**
 	 * Compare To
@@ -55,11 +55,13 @@ public abstract class ConsoleShape implements Comparable<ConsoleShape> {
 	 */
 	@Override
 	public int compareTo(ConsoleShape that) {
-		return (int)Double.compare(this.getArea(), that.getArea());
+		return Integer.compare(this.getArea(), that.getArea());
 	}
 	
 	@Override
 	public String toString() {
-		return new String("*** Console Shape Object *** \nFilled In: " + this.filledIn);
+		String info = "*** Console Shape Object *** \nFilled In: " + this.filledIn;
+		info += "\nArea: " + this.getArea() + "\nPerimeter: " + this.getPerimeter();
+		return info;
 	}
 }
