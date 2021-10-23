@@ -99,9 +99,9 @@ public class ConsoleRectangle extends ConsoleShape {
 		String image = "";
 		for (int x = 0; x < this.getWidth(); x++) {
 			for (int y = 0; y < this.getHeight(); y++) {
-				if (x == 0 || x == this.getWidth()) {
+				if (x == 0 || x == this.getWidth() - 1) {
 					output[x][y] = "#";
-				} else if (y == 0 || y == this.getHeight()) {
+				} else if (y == 0 || y == this.getHeight() -1) {
 					output[x][y] = "#";
 				} else if (this.isFilledIn()) {
 					output[x][y] = "#";
@@ -110,10 +110,10 @@ public class ConsoleRectangle extends ConsoleShape {
 				}
 			}
 		}
-		for (int y = 0; y < output.length; i++) {
-			for (int x = 0; x < output[y].length; x++) {
+		for (int y = 0; y < this.getHeight(); y++) {
+			for (int x = 0; x < this.getWidth(); x++) {
 				image += output[x][y];
-				if (x == this.getWidth()) {
+				if (x == this.getWidth() - 1) {
 					image += "\n";
 				}
 			}

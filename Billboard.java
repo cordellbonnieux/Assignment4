@@ -49,21 +49,21 @@ public class Billboard implements ConsoleDrawable {
 	@Override
 	public String drawForConsole() {
 		String output = "";
-		int length = this.getMessage().length() + 2;
+		int length = this.getMessage().length() + 4;
 		for (int y = 0; y < 5; y++) {
-			for (int x = 0; x < length ; x++) {
+			for (int x = 0; x < length; x++) {
 				if (y == 0 || y == 4) {
-					String += "#";
-				} else if (x == 0 || x == length) {
 					output += "#";
-				} else if (x != 0 && x != length && y == 2) {
-					int pos = x - 1;
-					output += this.getMessage().charAt(pos);
+				} else if (x == 0 || x == length - 1) {
+					output += "#";
+				} else if (x > 1 && x < length - 2 && y == 2) {
+					int pos = x - 2;
+					output += "" + this.getMessage().charAt(pos);
 				} else {
 					output += " ";
 				}
 				
-				if (x == length) {
+				if (x == length - 1) {
 					output += "\n";
 				}
 			}
