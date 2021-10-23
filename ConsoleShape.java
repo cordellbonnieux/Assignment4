@@ -4,7 +4,7 @@
  * @author Cordell Bonnieux
  *
  */
-public abstract class ConsoleShape implements Comparable<ConsoleShape> {
+public abstract class ConsoleShape implements Comparable<ConsoleShape>, ConsoleDrawable {
 	private boolean filledIn;
 	
 	/**

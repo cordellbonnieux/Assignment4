@@ -89,6 +89,34 @@ public class ConsoleRectangle extends ConsoleShape {
 	}
 	
 	@Override
+	public String drawForConsole() {
+		String[][] output = new String[this.getWidth()][this.getHeight()];
+		String image = "";
+		for (int x = 0; x < this.getWidth(); x++) {
+			for (int y = 0; y < this.getHeight(); y++) {
+				if (x == 0 || x == this.getWidth()) {
+					output[x][y] = "#";
+				} else if (y == 0 || y == this.getHeight()) {
+					output[x][y] = "#";
+				} else if (this.isFilledIn()) {
+					output[x][y] = "#";
+				} else {
+					output[x][y] = " ";
+				}
+			}
+		}
+		for (int y = 0; y < output.length; i++) {
+			for (int x = 0; x < output[y].length; x++) {
+				image += output[x][y];
+				if (x == this.getWidth()) {
+					image += "\n";
+				}
+			}
+		}
+		return image;
+	}
+	
+	@Override
 	public String toString() {
 		String info = "*** Console Rectangle Instance ***\n";
 		info += "-Child class of \"Console Shape\"\n";
