@@ -88,6 +88,11 @@ public class ConsoleRectangle extends ConsoleShape {
 		return 2 * (this.height + this.width);
 	}
 	
+	/**
+	 * Draw For Console
+	 * Draws a hash-tag(pound sign) rectangle shaped based on instance's data members.
+	 * @return String image - An ASCII character image of a Rectangle
+	 */
 	@Override
 	public String drawForConsole() {
 		String[][] output = new String[this.getWidth()][this.getHeight()];
