@@ -17,7 +17,7 @@ public class Billboard implements ConsoleDrawable {
 		} else if (m.contains("\n")) {
 			throw new IllegalArgumentException("Message can only constain one line.");
 		}
-		this.message = m;
+		this.message = " " + m.trim() + " ";
 	}
 	
 	/**
@@ -30,7 +30,7 @@ public class Billboard implements ConsoleDrawable {
 		} else if (m.contains("\n")) {
 			throw new IllegalArgumentException("Message can only constain one line.");
 		}
-		this.message = m;
+		this.message = " " + m.trim() + " ";
 	}
 	
 	/**
@@ -49,15 +49,15 @@ public class Billboard implements ConsoleDrawable {
 	@Override
 	public String drawForConsole() {
 		String output = "";
-		int length = this.getMessage().length() + 4;
+		int length = this.getMessage().length() + 2;
 		for (int y = 0; y < 5; y++) {
 			for (int x = 0; x < length; x++) {
 				if (y == 0 || y == 4) {
 					output += "#";
 				} else if (x == 0 || x == length - 1) {
 					output += "#";
-				} else if (x > 1 && x < length - 2 && y == 2) {
-					int pos = x - 2;
+				} else if (x > 0 && x < length - 2 && y == 2) {
+					int pos = x - 1;
 					output += "" + this.getMessage().charAt(pos);
 				} else {
 					output += " ";

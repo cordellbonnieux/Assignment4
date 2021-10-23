@@ -1,5 +1,10 @@
 import java.util.Arrays;
-
+/**
+ * Console Objects Tester 
+ * Used to test Assignment 4 classes
+ * @author Cordell Bonnieux
+ *
+ */
 public class ConsoleObjectsTester {
 	public static void main(String[] args) {
 		
@@ -55,15 +60,10 @@ public class ConsoleObjectsTester {
 				new Billboard("I pity the fool!"),
 				new Billboard("Take it or leave it"),
 				new Billboard("You're luggage"),
-				new Billboard("First rule is: be nice to mommy.")
+				new Billboard("First rule is: be nice to mommy."),
+				new Billboard("Here is a longer one, to show that a billboard can be very long, so long really that it does not make much sense!"),
 		};
-		// Print Rectangles to console
-		for (int i = 0; i < list.length; i++) {
-			System.out.println(list[i].drawForConsole());
-		}
-		// Sort, then print them again
-		Arrays.sort(list);
-		System.out.println("\n \n \n ************ list is now sorted ************ \n \n \n");
+		// Print Rectangles and Billboards to console
 		for (int i = 0; i < list.length; i++) {
 			System.out.println(list[i].drawForConsole());
 		}
