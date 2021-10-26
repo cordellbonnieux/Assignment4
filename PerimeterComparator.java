@@ -14,7 +14,7 @@ public class PerimeterComparator implements Comparator<ConsoleShape> {
 	 */
 	@Override
 	public int compare(ConsoleShape one, ConsoleShape two) {
-		return Integer.compare(one.getPerimeter(), two.getPerimeter());
+		return Double.compare(one.getPerimeter(), two.getPerimeter());
 	}
 
 }
