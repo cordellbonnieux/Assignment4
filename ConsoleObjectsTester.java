@@ -18,10 +18,12 @@ public class ConsoleObjectsTester {
 			System.out.println("Which would you like to test? (please enter a number) "
 					+ "\n test rectangles (exercise 7 pt1): 1 \n test rectangles & billboards (exercise 7 pt2): 2"
 					+ "\n test sorting by perimeter using comparator (exercise 8): 3"
-					+ "\n exit: 4");
-			Integer choice = 0;
+					+ "\n exit: 4 \n");
+			String input = scan.nextLine();
+			int choice = 0;
+			
 			try {
-				choice = scan.nextInt();
+				choice = Integer.valueOf(input);
 			} catch (Exception e) {
 				System.out.println("Invalid input, try again.");
 			}
@@ -35,6 +37,7 @@ public class ConsoleObjectsTester {
 					break;
 				case 4: System.out.println("Goodbye!");
 					exit = true;
+					break;
 			}
 		}
 		scan.close();
@@ -59,7 +62,9 @@ public class ConsoleObjectsTester {
 				new ConsoleRectangle(30, 12, false),
 				new ConsoleRectangle(14, 7, false)
 		};
+		
 		// Print Rectangles to console
+		System.out.println("\n \n \n ************ unsorted shapes ************ \n \n \n");
 		for (int i = 0; i < list.length; i++) {
 			System.out.println(list[i].drawForConsole());
 		}
@@ -113,7 +118,7 @@ public class ConsoleObjectsTester {
 			System.out.println(list.get(i).drawForConsole());
 		}
 		
-		System.out.println("************ shapes sorted by perimeter ************\n");
+		System.out.println("************ shapes sorted by perimeter (descending order) ************\n");
 		Collections.sort(list, new PerimeterComparator());
 		for (int i = 0; i < list.size(); i++) {
 			System.out.println(list.get(i).drawForConsole());

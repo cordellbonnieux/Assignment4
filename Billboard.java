@@ -1,6 +1,6 @@
 /**
  * Billboard
- * Creates a Billboard containing a message to be printed to the console.
+ * Creates a Billboard of ACII characters containing a message to be printed to the console.
  * @author Cordell Bonnieux
  *
  */

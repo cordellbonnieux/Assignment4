@@ -1,5 +1,6 @@
 /**
  * ConsoleDrawable Interface
+ * Used for classes to draw shapes to the console
  * @author Cordell Bonnieux
  *
  */
